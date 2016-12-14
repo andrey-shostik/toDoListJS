@@ -13,9 +13,14 @@
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
-      });
+      })
+      .state('tasks', {
+        url: '/tasks',
+        templateUrl: 'app/tasks/tasks.html',
+        controller: 'TasksController',
+        controllerAs: 'tasks'
+      })
 
     $urlRouterProvider.otherwise('/');
   }
-
 })();

@@ -1,0 +1,17 @@
+<div class="container" ng-app="toDoListFrontend">
+  <br>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="task in tasks.tasks">
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
