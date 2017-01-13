@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -12,14 +12,14 @@
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'vm'
       })
       .state('tasks', {
         url: '/tasks',
         templateUrl: 'app/tasks/tasks.html',
-        controller: 'TasksController',
-        controllerAs: 'tasks'
-      })
+        controller: 'TaskController',
+        controllerAs: 'vm'
+      });
 
     $urlRouterProvider.otherwise('/');
   }

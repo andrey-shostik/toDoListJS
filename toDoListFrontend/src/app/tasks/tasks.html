@@ -8,10 +8,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="task in tasks.tasks">
-        <td>{{ task.title }}</td>
+      <tr ng-repeat="task in vm.tasks">
+        <td id="lol">{{ task.title }}</td>
         <td>{{ task.description }}</td>
+        <td><button ng-click="vm.removeTask(task)" class="btn btn-default">delete</button></td>
       </tr>
     </tbody>
   </table>
+
+  <form class="form-inline" ng-submit="vm.addTask()">
+    <input type="text" name="title" placeholder="title" ng-model="vm.newTask.title" class="form-control">
+    <input type="text" name="description" placeholder="description" ng-model="vm.newTask.description" class="form-control">
+    <button type="submit" name="submit" class="btn btn-default">Add Task</button>
+  </form>
 </div>
